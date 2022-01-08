@@ -24,5 +24,5 @@ app
   .use("/api", signuproute)
   .use("/api", loginroute)
   .use("/api", logoutroute)
-  .get("*", (_, res) => res.status(200).sendFile("index.html"))
+  .get("*", (_, res) => res.status(200).json({ message: "Welcome to the API" }))
   .listen(port, () => console.log("http://localhost:" + port));
